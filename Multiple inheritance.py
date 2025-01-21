@@ -54,20 +54,7 @@ class Duckbill(PoisonousAnimal, Bird, AquaticAnimal, ):
     def __init__(self, speed):
         super().__init__(speed)
         self.sound = "Click-click-click"
-        # super().live
-        # super().beak
-        # super().speak()
-        # super().attack()
-        # super().move(dx:= 0,dy:= 0, dz:= 0)
-        # super().get_cords()
-        # super().dive_in(dz)
-        # super().lay_eggs()
-
-
-
-
-
-
+        
 db = Duckbill(10)
 
 print(db.live)
