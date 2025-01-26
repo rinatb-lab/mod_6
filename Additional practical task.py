@@ -33,18 +33,7 @@ class Figure:
             self.__color = y
         else:
             return
-        return self.__color
-
-
-    #def __is_valid_color(self, r, g, b):
-    #    y = [r, g, b]
-    #    for i in range(len(y)):
-    #        if 0 <= y[i] <=255 and isinstance(y[i], int): # диапазон и тип int
-    #            self.__color[i] = y[i]   #замена переменной __color
-    #        else:
-    #            return self.__color
-    #        #print(self.__color)
-    #    return self.__color
+        return self.__color    
     def set_color(self, r, g, b):
         self.__is_valid_color(r, g, b)
         #print(self.__color)
