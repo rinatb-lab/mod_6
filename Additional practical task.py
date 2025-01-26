@@ -25,17 +25,26 @@ class Figure:
             for i in range(1, self.sides_count):
                 self.__sides.append(self.__sides[0])
         return self.__sides
-
-
     def __is_valid_color(self, r, g, b):
         y = [r, g, b]
-        for i in range(len(y)):
-            if 0 <= y[i] <=255 and isinstance(y[i], int): # диапазон и тип int
-                self.__color[i] = y[i]   #замена переменной __color
-            else:
-                return self.__color
-            #print(self.__color)
+        start, end = 0, 255
+        in_range = all(start <= num <= end for num in y)
+        if in_range and all(isinstance(n, int) for n in y):
+            self.__color = y
+        else:
+            return
         return self.__color
+
+
+    #def __is_valid_color(self, r, g, b):
+    #    y = [r, g, b]
+    #    for i in range(len(y)):
+    #        if 0 <= y[i] <=255 and isinstance(y[i], int): # диапазон и тип int
+    #            self.__color[i] = y[i]   #замена переменной __color
+    #        else:
+    #            return self.__color
+    #        #print(self.__color)
+    #    return self.__color
     def set_color(self, r, g, b):
         self.__is_valid_color(r, g, b)
         #print(self.__color)
